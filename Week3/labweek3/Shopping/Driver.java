@@ -5,7 +5,7 @@ public class Driver {
 	private static Cart testCart;
 
 	public static void main(String args[]) {
-		testCart = new Cart();
+		testCart = new Cart(10);
 	}
 
 		

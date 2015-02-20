@@ -8,4 +8,6 @@ public class CartItem {
 		System.out.println("Cart item created.");
 	}
 
+	private String name;
+
 }
