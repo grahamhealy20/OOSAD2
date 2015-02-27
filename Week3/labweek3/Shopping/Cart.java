@@ -4,11 +4,14 @@ import java.util.*;
 
 public class Cart {
 
+	protected Collection<CartItem> cartItems = new ArrayList<CartItem>();
+
+
 	public Cart(int no_of_items) {
 		// TODO - implement Cart.Cart
 		//throw new UnsupportedOperationException();
 		for(int i = 0; i < no_of_items; i++) {
-			cartItem ci = new CartItem()			
+			CartItem ci = new CartItem("Test " + i);			
 			cartItems.add(ci);
 			System.out.println("Blank cart Created");
 		}
@@ -18,7 +21,4 @@ public class Cart {
 	public Cart() {
 		System.out.println("Blank cart Created");
 	}
-
-	protected Collection<CartItem> cartItems;
-
 }
