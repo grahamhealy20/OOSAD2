@@ -26,4 +26,12 @@ public class Module {
 		throw new UnsupportedOperationException();
 	}
 
+	public Module(String name, int classSize) {
+		this.name = name;
+		this.classSize = classSize;
+		System.out.println("New Module Created");
+		System.out.println("Name: " + name);
+		System.out.println("Class Size: " + classSize);
+		}
+
 }

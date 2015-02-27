@@ -38,7 +38,12 @@ public class Teacher extends Professional {
 		// throw new UnsupportedOperationException();
 	}
 
-	public void addModule(Module m) {
+	public void addModule(String name, int classSize) {
+		Module m = new Module(name, classSize);	
 		modules.add(m);
+	}
+
+	public void addDegree(Degree d) {
+		degrees.add(d);
 	}
 }

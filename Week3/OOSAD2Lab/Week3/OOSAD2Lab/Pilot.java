@@ -22,9 +22,19 @@ public class Pilot extends Professional {
 		this.hours_flown = hours_flown;
 	}
 
-	public Pilot() {
+	public Pilot(String name, int id, String license_level, double hours_flown) {
 		// TODO - implement Pilot.Pilot
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();
+		super(name, id);
+		this.license_level = license_level;
+		this.hours_flown = hours_flown;
+		System.out.println("\nNew Pilot created");
+		System.out.println("Name: " + name);
+		System.out.println("ID: " + id);
+		System.out.println("License Level: " + license_level);
+		System.out.println("Hours Flown: " + hours_flown);	
 	}
+
+	
 
 }
