@@ -1,9 +1,12 @@
 package Week3.OOSAD2Lab;
 
+import java.util.*;
+
 public class Doctor extends Professional {
 
 	private String practice;
 	private boolean is_registered;
+	private Collection<Specialisation> specialisations;
 
 	public String getPractice() {
 		return this.practice;

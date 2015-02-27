@@ -4,6 +4,7 @@ public class Pilot extends Professional {
 
 	private String license_level;
 	private double hours_flown;
+	private Rating rating;
 
 	public String getLicense_level() {
 		return this.license_level;

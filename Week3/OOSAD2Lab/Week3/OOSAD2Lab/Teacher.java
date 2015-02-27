@@ -6,7 +6,8 @@ public class Teacher extends Professional {
 
 	private String school;
 	private String level_of_edu;
-	private Collection<Module> modules;
+	private Collection<Module> modules = new ArrayList<Module>();
+	private Collection<Degree> degrees = new ArrayList<Degree>();
 
 	public String getSchool() {
 		return this.school;
@@ -24,9 +25,20 @@ public class Teacher extends Professional {
 		this.level_of_edu = level_of_edu;
 	}
 
-	public Teacher() {
+	public Teacher(String name, int id, String school, String level_of_edu) {
 		// TODO - implement Teacher.Teacher
-		throw new UnsupportedOperationException();
+		super(name, id);
+		this.school = school;
+		this.level_of_edu = level_of_edu;
+		System.out.println("New Teacher created");
+		System.out.println("Name: " + name);
+		System.out.println("ID: " + id);
+		System.out.println("School: " + school);
+		System.out.println("Level of Education: " + level_of_edu);		
+		// throw new UnsupportedOperationException();
 	}
 
+	public void addModule(Module m) {
+		modules.add(m);
+	}
 }
