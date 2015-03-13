@@ -2,16 +2,11 @@ package Week7.Singleton;
 
 public class Singleton {
 
-	private static int NoOfObjects;
 	private static int InvokeCounter;
-	private static Singleton s;
+	private static Singleton s = null;
 
 	public int getNoOfObjects() {
 		return this.NoOfObjects;
-	}
-
-	public void setNoOfObjects(int NoOfObjects) {
-		this.NoOfObjects = NoOfObjects;
 	}
 
 	private Singleton() {
@@ -19,8 +14,7 @@ public class Singleton {
 	}
 
 	public static Singleton CreateSingleton() {
-		// TODO - implement Singleton.CreateSingleton
-		if(NoOfObjects == 0) {
+		if(s == null) {
 			InvokeCounter++;
 			s = new Singleton();
 			System.out.println("Singleton Created");
