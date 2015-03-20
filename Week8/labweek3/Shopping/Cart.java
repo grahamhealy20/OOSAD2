@@ -37,6 +37,6 @@ public class Cart {
 	 */
 	public void deleteItem(int id) {
 		// TODO - implement Cart.deleteItem
-		throw new UnsupportedOperationException();
+		//throw new UnsupportedOperationException();	
 	}
 }
