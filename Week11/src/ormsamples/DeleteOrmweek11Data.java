@@ -12,6 +12,9 @@ public class DeleteOrmweek11Data {
 			ormweek11.ormtest.Employee lormweek11ormtestEmployee = ormweek11.ormtest.EmployeeDAO.loadEmployeeByQuery(null, null);
 			// Delete the persistent object
 			ormweek11.ormtest.EmployeeDAO.delete(lormweek11ormtestEmployee);
+			ormweek11.ormtest.Sales lormweek11ormtestSales = ormweek11.ormtest.SalesDAO.loadSalesByQuery(null, null);
+			// Delete the persistent object
+			ormweek11.ormtest.SalesDAO.delete(lormweek11ormtestSales);
 			t.commit();
 		}
 		catch (Exception e) {

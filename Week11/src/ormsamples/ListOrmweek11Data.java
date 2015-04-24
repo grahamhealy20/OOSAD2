@@ -17,6 +17,14 @@ public class ListOrmweek11Data {
 		}
 		System.out.println(length + " record(s) retrieved.");
 		
+		System.out.println("Listing Sales...");
+		ormweek11.ormtest.Sales[] ormweek11ormtestSaleses = ormweek11.ormtest.SalesDAO.listSalesByQuery(null, null);
+		length = Math.min(ormweek11ormtestSaleses.length, ROW_COUNT);
+		for (int i = 0; i < length; i++) {
+			System.out.println(ormweek11ormtestSaleses[i]);
+		}
+		System.out.println(length + " record(s) retrieved.");
+		
 	}
 	
 	public void listByCriteria() throws PersistentException {
@@ -31,6 +39,18 @@ public class ListOrmweek11Data {
 			 System.out.println(ormweek11ormtestEmployees[i]);
 		}
 		System.out.println(length + " Employee record(s) retrieved."); 
+		
+		System.out.println("Listing Sales by Criteria...");
+		ormweek11.ormtest.SalesCriteria lormweek11ormtestSalesCriteria = new ormweek11.ormtest.SalesCriteria();
+		// Please uncomment the follow line and fill in parameter(s) 
+		//lormweek11ormtestSalesCriteria.ID.eq();
+		lormweek11ormtestSalesCriteria.setMaxResults(ROW_COUNT);
+		ormweek11.ormtest.Sales[] ormweek11ormtestSaleses = lormweek11ormtestSalesCriteria.listSales();
+		length =ormweek11ormtestSaleses== null ? 0 : Math.min(ormweek11ormtestSaleses.length, ROW_COUNT); 
+		for (int i = 0; i < length; i++) {
+			 System.out.println(ormweek11ormtestSaleses[i]);
+		}
+		System.out.println(length + " Sales record(s) retrieved."); 
 		
 	}
 	

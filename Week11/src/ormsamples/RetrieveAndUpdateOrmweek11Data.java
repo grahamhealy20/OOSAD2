@@ -12,6 +12,9 @@ public class RetrieveAndUpdateOrmweek11Data {
 			ormweek11.ormtest.Employee lormweek11ormtestEmployee = ormweek11.ormtest.EmployeeDAO.loadEmployeeByQuery(null, null);
 			// Update the properties of the persistent object
 			ormweek11.ormtest.EmployeeDAO.save(lormweek11ormtestEmployee);
+			ormweek11.ormtest.Sales lormweek11ormtestSales = ormweek11.ormtest.SalesDAO.loadSalesByQuery(null, null);
+			// Update the properties of the persistent object
+			ormweek11.ormtest.SalesDAO.save(lormweek11ormtestSales);
 			t.commit();
 		}
 		catch (Exception e) {
@@ -26,6 +29,12 @@ public class RetrieveAndUpdateOrmweek11Data {
 		// Please uncomment the follow line and fill in parameter(s)
 		//lormweek11ormtestEmployeeCriteria.ID.eq();
 		System.out.println(lormweek11ormtestEmployeeCriteria.uniqueEmployee());
+		
+		System.out.println("Retrieving Sales by SalesCriteria");
+		ormweek11.ormtest.SalesCriteria lormweek11ormtestSalesCriteria = new ormweek11.ormtest.SalesCriteria();
+		// Please uncomment the follow line and fill in parameter(s)
+		//lormweek11ormtestSalesCriteria.ID.eq();
+		System.out.println(lormweek11ormtestSalesCriteria.uniqueSales());
 		
 	}
 	
